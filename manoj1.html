@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Network Intrusion Data Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+        }
+        
+        .form-group {
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Network Intrusion Data Input</h2>
+        <form method="POST">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="portNumber">Port Number:</label>
+                <input type="text" id="portNumber" name="a1" required>
+            </div>
+            <div class="form-group">
+                <label for="receivedPackets">Received Packets:</label>
+                <input type="text" id="receivedPackets" name="a2" required>
+            </div>
+            <div class="form-group">
+                <label for="Received Bytes">Received Bytes:</label>
+                <input type="text" id="Received Bytes" name="a3" required>
+            </div>
+            <div class="form-group">
+                <label for="Sent Bytes">Sent Bytes:</label>
+                <input type="text" id="Sent Bytes" name="a4" required>
+            </div>
+            <div class="form-group">
+                <label for="Sent Packets">Sent Packets:</label>
+                <input type="text" id="Sent Packets" name="a5" required>
+            </div>
+            <div class="form-group">
+                <label for="Port alive Duration">Port alive Duration:</label>
+                <input type="text" id="Port alive Duration" name="a6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Packets Rx Dropped">Packets Rx Dropped:</label>
+                <input type="text" id="Packets Rx Dropped" name="a7" required>
+            </div>
+            <div class="form-group">
+                <label for="Packets Tx Dropped">Packets Tx Dropped:</label>
+                <input type="text" id="Packets Tx Dropped" name="a8" required>
+            </div>
+            <div class="form-group">
+                <label for="Packets Rx Errors">Packets Rx Errors:</label>
+                <input type="text" id="Packets Rx Errors" name="a9" required>
+            </div>
+            <div class="form-group">
+                <label for="Packets Tx Errors">Packets Tx Errors:</label>
+                <input type="text" id="Packets Tx Errors" name="a10" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Received Packets">Delta Received Packets:</label>
+                <input type="text" id="Delta Received Packets" name="a11" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Received Bytes">Delta Received Bytes:</label>
+                <input type="text" id="Delta Received Bytes" name="a12" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Sent Bytes">Delta Sent Bytes:</label>
+                <input type="text" id="Delta Sent Bytes" name="a13" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Sent Packets">Delta Sent Packets:</label>
+                <input type="text" id="Delta Sent Packets" name="a14" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Port alive Duratio">Delta Port alive Duratios:</label>
+                <input type="text" id="Delta Port alive Duratio" name="a15" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Packets Rx Dropped">Delta Packets Rx Dropped:</label>
+                <input type="text" id="Delta Packets Rx Dropped" name="a16" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Packets Tx Dropped">Delta Packets Tx Dropped:</label>
+                <input type="text" id="Delta Packets Tx Dropped" name="a17" required>
+            </div>
+            <div class="form-group">
+                <label for="Delta Packets Rx Errors">Delta Packets Rx Errors:</label>
+                <input type="text" id="Delta Packets Rx Errors" name="a18" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Delta Packets Tx Dropped">Delta Packets Tx Errors:</label>
+                <input type="text" id="Delta Packets Tx Dropped" name="a19" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Connection Point">Connection Point:</label>
+                <input type="text" id="Connection Point" name="a20" required>
+            </div>
+            <div class="form-group">
+                <label for="Total Load/Rate">Total Load/Rate:</label>
+                <input type="text" id="Total Load/Rate" name="a21" required>
+            </div>
+            <div class="form-group">
+                <label for="Total Load/Latest">Total Load/Latest:</label>
+                <input type="text" id="Total Load/Latest" name="a22" required>
+            </div>
+            <div class="form-group">
+                <label for="Unknown Load/Rate">Unknown Load/Rate:</label>
+                <input type="text" id="Unknown Load/Rate" name="a23" required>
+            </div>
+            <div class="form-group">
+                <label for="Unknown Load/Latest">Unknown Load/Latest:</label>
+                <input type="text" id="Unknown Load/Latest" name="a24" required>
+            </div>
+            <div class="form-group">
+                <label for="Latest bytes counter">Latest bytes counter:</label>
+                <input type="text" id="Latest bytes counter" name="a25" required>
+            </div>
+            <div class="form-group">
+                <label for="is_valid">is_valid:</label>
+                <input type="text" id="is_valid" name="a26" required>
+            </div>
+            <div class="form-group">
+                <label for="Table ID">Table ID:</label>
+                <input type="text" id="Table ID" name="a27" required>
+            </div>
+            <div class="form-group">
+                <label for="Active Flow Entries">Active Flow Entries:</label>
+                <input type="text" id="Active Flow Entries" name="a28" required>
+            </div>
+            <div class="form-group">
+                <label for="Packets Looked Up">Packets Looked Up:</label>
+                <input type="text" id="Packets Looked Up" name="a29" required>
+            </div>
+            <div class="form-group">
+                <label for="Packets Matched">Packets Matched:</label>
+                <input type="text" id="Packets Matched" name="a30" required>
+            </div>
+            <div class="form-group">
+                <label for="Max Size">Max Size:</label>
+                <input type="text" id="Max Size" name="a31" required>
+            </div>
+
+            <button type="submit" name="predict">Submit</button><br>
+
+            <p>{{info}}</p>
+    </div>
+
+
+
+
+
+    </form>
+    </div>
+</body>
+
+</html>
