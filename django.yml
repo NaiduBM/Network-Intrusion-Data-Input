@@ -1,0 +1,45 @@
+name: Django CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+        
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run Tests
+      run: |
+        python manage.py test
+        
+    - name: Run Migrations
+      run: |
+        python manage.py makemigrations
+        python manage.py migrate
+        
+    - name: Collect Static Files
+      run: |
+        python manage.py collectstatic --noinput
+        
+    - name: Deploy
+      env:
+        DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+        DJANGO_DEBUG: False
+      run: |
+        echo "Deploy your application here"
+        # Add your deployment commands
